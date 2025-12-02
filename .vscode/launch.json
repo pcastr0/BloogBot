@@ -1,0 +1,63 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug BloogBot",
+            "type": "clr",
+            "request": "launch",
+            "preLaunchTask": "build-debug",
+            "program": "${workspaceFolder}/Bot/BloogBot.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/Bot",
+            "console": "externalTerminal",
+            "stopAtEntry": false,
+            "requireExactSource": false,
+            "symbolOptions": {
+                "searchPaths": [
+                    "${workspaceFolder}/Bot",
+                    "${workspaceFolder}/BloogBot/bin/Debug"
+                ],
+                "searchMicrosoftSymbolServer": true,
+                "searchNuGetOrgSymbolServer": true
+            }
+        },
+        {
+            "name": "Debug Bootstrapper",
+            "type": "clr",
+            "request": "launch",
+            "preLaunchTask": "build-debug",
+            "program": "${workspaceFolder}/Bot/Bootstrapper.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/Bot",
+            "console": "externalTerminal",
+            "stopAtEntry": false,
+            "requireExactSource": false,
+            "symbolOptions": {
+                "searchPaths": [
+                    "${workspaceFolder}/Bot",
+                    "${workspaceFolder}/Bootstrapper/bin/Debug"
+                ],
+                "searchMicrosoftSymbolServer": true,
+                "searchNuGetOrgSymbolServer": true
+            }
+        },
+        {
+            "name": "Attach to Process",
+            "type": "clr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        },
+        {
+            "name": "Debug BloogBot (CoreCLR)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-debug",
+            "program": "${workspaceFolder}/Bot/BloogBot.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/Bot",
+            "console": "externalTerminal",
+            "stopAtEntry": false,
+            "requireExactSource": false
+        }
+    ]
+}
